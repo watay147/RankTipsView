@@ -124,12 +124,14 @@ public class RankTipsView extends View {
 
     public void setTextColor(int color){
         mTextColor=color;
+        mTextPaint.setColor(mTextColor);
         invalidate();
         requestLayout();
     }
 
     public void setBackgroundColor(int color){
         mBackgroundColor =color;
+        mPathPaint.setColor(mBackgroundColor);
         invalidate();
         requestLayout();
     }
