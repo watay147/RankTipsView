@@ -96,28 +96,42 @@ public class RankTipsView extends View {
 
     public void setWidth(int widthDip){
         mHalfWidth=DensityUtils.dip2px(getContext(),widthDip/2);
+        invalidate();
+        requestLayout();
     }
 
     public void setHeight(int heightDip){
         mHalfHeight=DensityUtils.dip2px(getContext(),heightDip*2/3);
+        invalidate();
+        requestLayout();
     }
     public void setTipsText(String text){
         mTipsText =text;
+        invalidate();
+        requestLayout();
     }
     public void setNumber(int num){
         mRank=num;
+        invalidate();
+        requestLayout();
     }
 
     public void setTextSize(int sizeSp){
         mTextSize =DensityUtils.sp2px(getContext(),sizeSp);
+        invalidate();
+        requestLayout();
     }
 
     public void setTextColor(int color){
         mTextColor=color;
+        invalidate();
+        requestLayout();
     }
 
     public void setBackgroundColor(int color){
         mBackgroundColor =color;
+        invalidate();
+        requestLayout();
     }
 
 
@@ -154,6 +168,8 @@ public class RankTipsView extends View {
         FrameLayout.LayoutParams params = (FrameLayout.LayoutParams) getLayoutParams();
         params.gravity = gravity;
         setLayoutParams(params);
+        invalidate();
+        requestLayout();
     }
 
     public int getGravity() {
@@ -172,6 +188,8 @@ public class RankTipsView extends View {
         params.rightMargin = DensityUtils.dip2px(getContext(),rightDipMargin);
         params.bottomMargin = DensityUtils.dip2px(getContext(),bottomDipMargin);
         setLayoutParams(params);
+        invalidate();
+        requestLayout();
     }
 
     public int[] getMargin() {
