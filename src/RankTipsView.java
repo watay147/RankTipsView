@@ -154,6 +154,12 @@ public class RankTipsView extends View {
     }
     @Override
    public void onDraw(Canvas canvas){
+        mPath.reset();
+        mPath.lineTo(-mHalfWidth,mHalfHeight/2);
+        mPath.lineTo(-mHalfWidth,-mHalfHeight);
+        mPath.lineTo(mHalfWidth,-mHalfHeight);
+        mPath.lineTo(mHalfWidth,mHalfHeight/2);
+        mPath.lineTo(0,0);
         canvas.translate(mWidth / 2, mHeight / 2);
         canvas.drawPath(mPath,mPathPaint);
         canvas.drawText(mTipsText,0,-mHalfHeight*3/4+mTextSize/2,mTextPaint);
